@@ -1,6 +1,7 @@
 import awsgi
 from flask import Flask, request, jsonify
 import requests
+from datetime import datetime, date
 
 
 app = Flask(__name__)
@@ -11,11 +12,17 @@ comments = []
 with app.app_context():
     response =  requests.get('https://app.ylytic.com/ylytic/test').json()
     comments = response["comments"]
+    print(comments[0])
 
 
 @app.route('/')
 def index():
     return jsonify(status=200, message='OK')
+
+
+def convert_date(date_str):
+    converted_datetime = datetime.strptime(date_str, '%a, %d %b %Y %H:%M:%S %Z')
+    return converted_datetime
 
 @app.route('/search', methods=['GET'])
 def search_comments():
@@ -30,11 +37,15 @@ def search_comments():
 
     result = []
     for comment in comments:
+        at_from_date = datetime.strptime(at_from, '%d-%m-%Y') if at_from else None
+        at_to_date = datetime.strptime(at_to, '%d-%m-%Y') if at_to else None
+        converted_date = convert_date(comment["at"])
+
         if search_author and search_author.lower() not in comment["author"].lower():
             continue
-        if at_from and comment["at"] < at_from:
+        if at_from_date and converted_date < at_from_date:
             continue
-        if at_to and comment["at"] > at_to:
+        if at_to_date and converted_date > at_to_date:
             continue
         if like_from and comment["like"] < int(like_from):
             continue
