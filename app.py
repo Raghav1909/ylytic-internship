@@ -12,7 +12,6 @@ comments = []
 with app.app_context():
     response =  requests.get('https://app.ylytic.com/ylytic/test').json()
     comments = response["comments"]
-    print(comments[0])
 
 
 @app.route('/')
