@@ -1,6 +1,6 @@
 # Ylytic Internship Assignment
 
-This is a simple Flask application that demonstrates search functionality on top of an existing API.
+This is a simple Flask application that demonstrates search functionality on top of an existing API [https://app.ylytic.com/ylytic/test](https://app.ylytic.com/ylytic/test).
 
 ## Deployment
 
@@ -15,7 +15,7 @@ The project is deployed at: [https://v2a30s3qi5.execute-api.ap-south-1.amazonaws
     cd ylytic-internship
     ```
 
-2. Install Pipenv if you don't have it:
+2. Install pipenv if you don't have it:
 
     ```bash
     pip install pipenv
