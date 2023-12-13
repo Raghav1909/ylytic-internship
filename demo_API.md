@@ -221,3 +221,26 @@
 ]
 ```
 
+## 5. Search by Text
+
+### Endpoint
+- [https://v2a30s3qi5.execute-api.ap-south-1.amazonaws.com/dev/search?search_text=economic](https://v2a30s3qi5.execute-api.ap-south-1.amazonaws.com/dev/search?search_text=economic)
+
+### Method
+- GET
+
+### Parameters
+- `search_text`: Search string in the text field.
+
+### Response
+```json
+[
+  {
+    "at": "Thu, 19 Jan 2023 09:59:46 GMT",
+    "author": "Fredrick Carlos",
+    "like": 1,
+    "reply": 1,
+    "text": "*Because of the economic crisis that always comes up the best thing to be on every wise individual’s mind or list is to invest in different streams of income that’s not depending on the government to generate funds.*"
+  }
+]
+```
