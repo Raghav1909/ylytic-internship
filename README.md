@@ -39,3 +39,8 @@ Once the installation and configuration are complete, you can run the Flask appl
 
 ```bash
 python app.py
+```
+
+## Demo APIs
+
+The demo APIs can be found at [Demo APIs](demo_API.md).
