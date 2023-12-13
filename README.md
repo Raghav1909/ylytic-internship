@@ -11,7 +11,7 @@ The project is deployed at: [https://v2a30s3qi5.execute-api.ap-south-1.amazonaws
 1. Clone the repository:
 
     ```bash
-    [https://github.com/Raghav1909/ylytic-internship.git](https://github.com/Raghav1909/ylytic-internship.git)
+    https://github.com/Raghav1909/ylytic-internship.git
     cd ylytic-internship
     ```
 
